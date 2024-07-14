@@ -48,5 +48,7 @@ app.get("/:example/*", function (req, res) {
   res.sendFile(join(__dirname, name, "index.html"));
 });
 
-app.listen(4000);
-console.log("Example server listening on port 4000");
+const PORT = 4000;
+
+app.listen(PORT);
+console.log(`Server listening on port ${PORT}`);
