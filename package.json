@@ -16,7 +16,9 @@
     "test": "jshint index.js test/tests.js && mocha test/tests.js",
     "serve": "serve test --symlinks",
     "test-cov": "jscoverage index.js index-cov.js; PAGE_COV=1 mocha test/tests.js -R html-cov > coverage.html",
-    "make": "rollup -c rollup.config.js"
+    "make": "rollup -c rollup.config.js",
+    "pretest": "eslint index.js lib/**/*.js test/**/*.js",
+    "lint": "eslint index.js lib/**/*.js test/**/*.js examples/**/*.js"
   },
   "dependencies": {
     "path-to-regexp": "~1.2.1",
